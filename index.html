@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+  <title>CAP market</title>
+
+
+<style>
+   
+   .imge{
+     padding: 0;
+     margin-top: -50px;
+	background: linear-gradient(rgba(0,0,0,0.5),rgba(113, 145, 53, 0.5)), url('img/img_projet/Plan de travail 1.png');
+	height: 70vh;
+	background-size: cover;
+	background-position: center; 
+} 
+.tex-ty{
+  font-size: 105px;
+  font-family: cursive;
+  color: aliceblue;
+
+} 
+
+
+
+  
+</style>
+
+</head> 
+
+<body onload="chargcontenue()" style="background-color: rgb(65, 55, 14);"> 
+  <div >
+        <div class=".container-fluid" > 
+            <nav class="navbar navbar-light bg-light" >
+              
+               <div>
+
+               GL.MARKET
+              </div> 
+            </nav> 
+         </div>   
+          <div style="margin-bottom: 90px;" class="imge"> <!--espace entre navabar et articles-->
+            
+        
+        </div>  
+    
+      <div style="margin-bottom: 100px; " ><!--espace entre navabar et articles--><center><h3 class="tex-ty">Bien manger, un plaisir<br> à partager</h3> </center>  </div>
+
+      <div class="container" id="contenue">
+      <!--img articles-->
+      </div>  
+ 
+    <br>  
+   
+ 
+  <div style="background-color: #3c3c3d;">
+
+          <div class="container" class="card-body" class="btn-outline-success">
+
+            <form action="">
+
+                <div class="mb-3">
+                    <label  class="form-label" style="color: blanchedalmond;">NOM</label>
+                    <input type="text" class="form-control" id="nom" placeholder="nom" class="form-control" ><br>
+                </div >
+
+                  <div class="mb-3">
+                    <label  class="form-label" style="color: blanchedalmond;">PRENOM</label>
+                    <input type="text" class="form-control" id="prenom" placeholder="prenom" class="form-control"><br>
+                  </div >
+
+                  <div class="mb-3">
+                      <label  class="form-label" style="color: blanchedalmond;">ADRESS</label>
+                    <input type="adress" class="form-control" id="adress" placeholder="adress" class="form-control" ><br>
+                  <div class="mb-3">
+
+                  <div class="mb-3">
+                      <label  class="form-label" style="color: blanchedalmond;">NUMERO DE TELEPHONE</label>
+                      <input type="text" class="form-control" id="numtel" placeholder="numero de telephone" class="form-control"  maxlength="12"><br>
+                  </div >
+            </form>
+          </div>
+ 
+  <h4 class="text-danger text-center" hidden id="vide">Aucun article n'a été enregistré</h4>
+
+<div id="fact">
+
+  <div  id="list" hidden>
+     
+    <div style="color:#3c3c3d ;" class="text-center">
+    <h2 >FACTURES</h2>
+    <hr>
+  </div>
+
+    <h2 class="text-center text-primary">ARTICLE(S) COMMANDE</h2>
+        <table class="table table-dark table-striped">
+
+            <tr class="bg-secondary text-white">
+                  <th>DESiGNATION</th>s
+                  <th>PRIX</th>
+                  <th>QUANTITE</th>
+                  <th>MONTANT</th>
+            </tr>
+
+            <tbody id="Tablearticle">
+                <!--ARTICLE COMMANDE-->
+            </tbody>
+                <br>
+       </table> 
+    
+      <!--Tableau Total-->
+      <table class="table table-dark table-striped"> 
+            <tr >
+                 <th class="text-center">TOTAL</th>
+            </tr> 
+           <tbody id="ToTals" >  
+               <!--TOTAL ARTICLE COMMANDE-->
+            </tbody>
+      </table>
+  </div> 
+  
+
+  
+   <div id="factures" hidden >
+   
+      <table class="table table-dark table-striped" id="tablTable"> 
+
+          <h2 class="text-center text-primary">VOS NFORMATIONS</h2>
+              <tr class="bg-secondary text-white" >
+                  <th>PRENOM ET NOM</th>
+                  <th>ADRESS</th>
+                  <th>NUMERO DE TELEPHONE</th>
+         
+              </tr> 
+
+          <tbody id="factClients" >  
+                <!--INFORMATION CLIENTS-->
+          </tbody>
+      </table> 
+    
+    
+   </div>    
+
+    <div style="color:#3c3c3d ;" class="text-left">
+      date et heure commande
+        <hr>
+      <div id="dateHE" >
+      </div>
+    </div>  
+</div>
+   <br>
+   <button value="" class="btn btn-primary" type="button" id="pdfFile" hidden >Generer la facture</button>
+   <button value="" class="btn btn-success" type="button" id="btnValide" >valider</button>
+ </div>
+
+  <br> 
+
+  
+
+
+</div> 
+
+</body> 
+
+<script src="js/projet.js"></script>
+</html>

@@ -1,0 +1,129 @@
+function ajout(element1) {
+    about.removeAttribute('hidden');
+    //console.log(element);
+    TabImages.forEach(element => {
+        if (element.id == element1) {
+            let verif = 0;
+            for (let i = 0; i < Tabcommande.length; i++) {
+                if (element == Tabcommande[i]) {
+                    verif = 1;
+                }
+
+            }
+            if (verif == 0) {
+                element.stock = element.stock - 1;
+                TabImages.stock = element.stock - element.qte;
+                Tabcommande.push(element);
+       
+                afficheTableau();
+                contenu.innerHTML = "";
+                loadContenu()
+            } else {
+                element.qte += 1;
+                element.stock = element.stock - 1;
+                TabImages.stock = element.stock - element.qte;
+               
+                element.montant += element.montant;
+  
+                afficheTableau();
+                contenu.innerHTML = "";
+                loadContenu()
+                
+                if (element.stock == 0) {
+                    alert("Quantite en rupture!! Veuillez-vous choisir un autre produit---");
+                    TabImages.stock = 0;
+         
+                }
+            }
+        }
+    });
+    //ajoutcommande();
+}poi 
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>CAP market</title>
+</head>
+
+<body onload="chargcontenue()" style="background-color: rgb(65, 55, 14);"> 
+  <div >
+  <div class=".container-fluid" > 
+    <nav class="navbar navbar-light bg-light" >
+      <div  class="row gx-6">
+        <a class="navbar-brand" href="#" >
+          GlENN MARKET</a>
+      </div> 
+    </nav> 
+    <h6>about</h6>
+   <div style="margin-bottom: 100px;"><!--espace entre navabar et articles--> </div>
+   
+  </div>  
+
+
+<div style="margin-bottom: 100px;"><!--espace entre navabar et articles--> </div>
+
+<div class="container" id="contenue">
+ 
+</div>  
+
+  <br> 
+    
+ 
+  <div style="background-color: #3c3c3d;">
+
+    <div class="container" class="card-body" class="btn-outline-success">
+
+      <form action="">
+
+          <div class="mb-3">
+              <label  class="form-label" style="color: blanchedalmond;">NOM</label>
+              <input type="text" class="form-control" id="nom" placeholder="nom" ><br>
+          </div >
+
+            <div class="mb-3">
+               <label  class="form-label" style="color: blanchedalmond;">PRENOM</label>
+               <input type="text" class="form-control" id="prenom" placeholder="prenom" ><br>
+            </div >
+
+            <div class="mb-3">
+                <label  class="form-label" style="color: blanchedalmond;">ADRESS</label>
+               <input type="adress" class="form-control" id="adress" placeholder="adress" ><br>
+            <div class="mb-3">
+
+            <div class="mb-3">
+                <label  class="form-label" style="color: blanchedalmond;">NUMERO DE TELEPHONE</label>
+                <input type="adress" class="form-control" id="numtel" placeholder="numero de telephone"><br>
+            </div >
+      </form>
+    </div>
+ 
+
+  <table class="table table-dark table-striped" hidden  id="Tablearticle">
+    <tr>
+      <td>DESiGNATION</td>
+      <td>QUANTITE</td>
+      <td>PRIX</td>
+      <td>TOTAL</td>
+    </tr>
+
+ 
+
+  </table> 
+  <button value="" class="btn btn-success" type="button" id="btnValide">valider</button>
+  <h4 class="text-danger text-center"  hidden id="vide">Aucun produit  n'a été enregistré</h4>
+  <script src="js/projet.js"></script>
+
+</div>
+</body >  
+   
+<footer style="background-color:black;" >
+  <h6>glenn MARKET is an online company </h6>
+</footer>
+ 
+</html>

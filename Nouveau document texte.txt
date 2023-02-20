@@ -1,0 +1,94 @@
+<div class="row">
+            <div class="col-sm-12">informatique</div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3"> <img src="img/img_projet/epinard.jpg" class="rounded float-start" alt="..." width="250px"></div>
+          <div class="col-sm-3"> <img src="img/img_projet/fanta-orange-can-black-splash-1383085.jpg" class="rounded float-start" alt="..." width="290px"></div>
+          <div class="col-sm-3"> <img src="img/img_projet/epinard.jpg" class="rounded float-start" alt="..." width="250px"></div>
+          <div class="col-sm-3"> <img src="img/img_projet/epinard.jpg" class="rounded float-start" alt="..." width="250px"></div>
+  
+        </div> 
+
+<div class="container"></div> 
+///affiche emme
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card">
+              <img src="img/img_projet/article7.jpg">
+                <div class="card-footer">
+                <h1>le libelle du produit</h1>
+              </div>
+            </div>
+          </div>
+        </div>   
+
+https://www.youtube.com/watch?v=VDV6PL0AXd4 
+
+///////////////////////////////////////////////////////////////////////////////////// 
+
+<div style="margin-bottom: 00px;"><!--espace entre navabar et articles--> </div>
+
+  <div class="container" id="contenue">
+  <!--img--> 
+  </div>  
+
+  <br> 
+    
+ 
+  <div style="background-color: #3c3c3d;">
+
+    <div class="container" class="card-body" class="btn-outline-success">
+
+      <form action="">
+
+          <div class="mb-3">
+              <label  class="form-label" style="color: blanchedalmond;" disabled="">NOM</label>
+              <input type="text" class="form-control" id="nom" placeholder="nom" ><br>
+          </div >
+
+            <div class="mb-3">
+               <label  class="form-label" style="color: blanchedalmond;">PRENOM</label>
+               <input type="text" class="form-control" id="prenom" placeholder="prenom" ><br>
+            </div >
+
+            <div class="mb-3">
+                <label  class="form-label" style="color: blanchedalmond;">ADRESS</label>
+               <input type="adress" class="form-control" id="adress" placeholder="adress" ><br>
+            </div>
+
+            <div class="mb-3">
+                <label  class="form-label" style="color: blanchedalmond;" disabled>NUMERO DE TELEPHONE</label>
+                <input type="adress" class="form-control" id="numtel" placeholder="numero de telephone"><br>
+            </div >
+      </form>
+    </div>
+  
+
+    
+
+  <table class="table table-dark table-striped" hidden  id="Tablearticle">
+    <tr>
+      <td>DESiGNATION</td>
+      <td>QUANTITE</td>
+      <td>TOTAL</td>
+    </tr> 
+    
+       
+
+  </table> 
+  <button value="" class="btn btn-success" type="button" id="btnValide">valider</button>
+  <h4 class="text-danger text-center"  hidden id="vide">Aucun produit  n'a été enregistré</h4>
+  <script src="js/projet.js"></script>
+
+ </div>
+</div> 
+
+</body >  
+   
+<footer style="background-color:black;" >
+  <h6> </h6>
+</footer>
+ 
+
+
+
